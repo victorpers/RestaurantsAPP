@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimary"
+    android:elevation="4dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/edittextname"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:hint="Search restaurant name"/>
+
+        <EditText
+            android:id="@+id/edittextcity"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:hint="Search city name"/>
+
+        <EditText
+            android:id="@+id/edittextprice"
+            android:layout_width="270dp"
+            android:layout_height="wrap_content"
+            android:hint="Search price (1 to 4)"/>
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/map_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:minWidth="42dp"
+        android:minHeight="42dp"
+        android:layout_gravity="right"
+        android:layout_marginRight="25dp"
+        android:background="@drawable/ic_action_name"/>
+
+</android.support.v7.widget.Toolbar>
