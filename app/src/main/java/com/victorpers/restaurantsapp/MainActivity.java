@@ -1,5 +1,6 @@
 package com.victorpers.restaurantsapp;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -7,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
@@ -17,6 +19,7 @@ import com.victorpers.restaurantsapp.models.Result;
 import com.victorpers.restaurantsapp.models.Restaurants;
 import com.victorpers.restaurantsapp.utils.PaginationScrollListener;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -158,7 +161,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     //Permet de récupérer la data des restaurants
-    private List<Result> fetchResults(Response<Restaurants> response) {
+    public List<Result> fetchResults(Response<Restaurants> response) {
         Restaurants restaurants = response.body();
         return restaurants.getRestaurants();
     }
@@ -170,5 +173,4 @@ public class MainActivity extends AppCompatActivity {
                 currentPage
         );
     }
-
 }

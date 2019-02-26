@@ -34,7 +34,7 @@ public class PaginationAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
     private static final int LOADING = 1;
 
 
-    private List<Result> restaurantResults;
+    public static List<Result> restaurantResults;
     private Context context;
 
     private boolean isLoadingAdded = false;
@@ -45,7 +45,7 @@ public class PaginationAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
 
     }
 
-    public List<Result> getRestaurants() {
+    public static List<Result> getRestaurants() {
         return restaurantResults;
     }
 
@@ -80,8 +80,8 @@ public class PaginationAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
 
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
 
-        Result result = restaurantResults.get(position); // le restaurant selectionne par l'utilisateur
-        final Result dataToDetails = restaurantResults.get(position);
+        Result result = getRestaurants().get(position); // le restaurant selectionne par l'utilisateur
+        final Result dataToDetails = getRestaurants().get(position);
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
